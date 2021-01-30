@@ -7,4 +7,4 @@ class CityForm(ModelForm):
         fields = ['name']
         widgets = {
             'name': TextInput(attrs={'class' : 'input', 'placeholder' : 'Ville ?'}),
-        }
+        }  # Met a jour la class input pour avoir la bonne class et le placeholder correspondant.

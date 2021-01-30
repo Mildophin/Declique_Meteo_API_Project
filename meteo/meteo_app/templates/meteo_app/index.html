@@ -9,27 +9,27 @@
     <link rel="stylesheet" type="text/css" href="{%  static  'css/style.css'  %}">
 </head>
 <body>
-    <section class="hero is-primary">
-        <div class="hero-body">
-            <div class="container">
-                <h1 class="title">
+    <section class="section-titre">
+        <div class="">
+            <div class="">
+                <h1 class="titre">
                     Quelle est la météo aujourd'hui ?
                 </h1>
             </div>
         </div>
     </section>
-    <section class="section">
-        <div class="container">
-            <div class="columns">
-                <div class="column is-offset-4 is-4">
+    <section class="section-titre">
+        <div class="">
+            <div class="">
+                <div class="">
                     <form method="POST">
                         {% csrf_token %}
-                        <div class="field has-addons">
-                            <div class="control is-expanded">
+                        <div class="">
+                            <div class="">
                                 {{ form.name }}
                             </div>
-                            <div class="control">
-                                <button class="button is-info">
+                            <div class="">
+                                <button class="bouton">
                                     Ajouter une ville
                                 </button>
                             </div>
@@ -39,24 +39,24 @@
             </div>
         </div>
     </section>
-    <section class="section">
-        <div class="container">
-            <div class="columns">
-                <div class="column is-offset-4 is-4">
+    <section class="">
+        <div class="">
+            <div class="">
+                <div class="container">
                     {% for weather in weather_data %}
-                    <div class="box">
-                        <article class="media">
-                            <div class="media-left">
-                                <figure class="image is-50x50">
+                    <div class="">
+                        <article class="">
+                            <div class="">
+                                <figure class="">
                                     <img src="http://openweathermap.org/img/w/{{ weather.icon }}.png" alt="Image">
                                 </figure>
                             </div>
-                            <div class="media-content">
-                                <div class="content">
+                            <div class="">
+                                <div class="">
                                     <p>
-                                        <span class="title">{{ weather.city }}</span>
+                                        <span class="titre-ville">{{ weather.city }}</span>
                                         <br>
-                                        <span class="subtitle">{{ weather.temperature }}° C</span>
+                                        <span class="temperature">{{ weather.temperature }}° C</span>
                                         <br> {{ weather.description }}
                                     </p>
                                 </div>
@@ -69,6 +69,7 @@
         </div>
     </section>
     <footer class="footer">
+        Créé par Milan ❤️
     </footer>
 </body>
 </html>
